@@ -1117,8 +1117,9 @@
         const progress = Math.min(elapsed / duration, 1);
         const easeOutExpo = 1 - Math.pow(2, -10 * progress);
         const current = start + (end - start) * easeOutExpo;
-        el.textContent = Math.floor(current).toLocaleString() + suffix;
+        el.textContent = Math.round(current).toLocaleString() + suffix;
         if (progress < 1) requestAnimationFrame(update);
+        else el.textContent = end.toLocaleString() + suffix;
       }
       requestAnimationFrame(update);
     }
