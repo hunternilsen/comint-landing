@@ -1102,6 +1102,470 @@
       flex-shrink: 0;
     }
 
+    /* ===== DARK PIPELINE (KG-inspired) ===== */
+    .pipeline-dark {
+      background: var(--color-bg-hero);
+      border-radius: var(--radius-lg);
+      padding: var(--space-2xl) var(--space-xl);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pipeline-dark .pipeline {
+      flex-wrap: nowrap;
+      align-items: flex-start;
+    }
+
+    .pipeline-dark .pipeline-stage {
+      background: transparent;
+      border: none;
+      min-width: 120px;
+      padding: var(--space-md);
+    }
+
+    .pipeline-dark .pipeline-stage:hover {
+      border-color: transparent;
+    }
+
+    .pipeline-dark .pipeline-stage h4 {
+      color: var(--color-text-on-dark);
+    }
+
+    .pipeline-dark .pipeline-stage p {
+      color: var(--color-text-on-dark-secondary);
+    }
+
+    .pipeline-icon-box {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto var(--space-sm);
+    }
+
+    .pipeline-icon-box svg {
+      width: 24px;
+      height: 24px;
+      color: var(--color-bg-white);
+    }
+
+    .pipeline-icon-box.blue { background: var(--domo-blue); }
+    .pipeline-icon-box.orange { background: var(--accent-orange); }
+    .pipeline-icon-box.teal { background: #14B8A6; }
+    .pipeline-icon-box.amber { background: #F59E0B; }
+    .pipeline-icon-box.slate { background: #64748B; }
+
+    .pipeline-connector {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+      padding-top: var(--space-lg);
+    }
+
+    .pipeline-connector svg {
+      width: 32px;
+      height: 12px;
+    }
+
+    .pipeline-callout {
+      position: absolute;
+      bottom: var(--space-lg);
+      right: var(--space-lg);
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      padding: var(--space-sm) var(--space-md);
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: var(--radius-md);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-text-on-dark-secondary);
+    }
+
+    .pipeline-callout svg {
+      width: 18px;
+      height: 18px;
+      color: var(--domo-blue);
+    }
+
+    /* ===== TIMELINE V2 (numbered, colored) ===== */
+    .timeline-v2 {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xl);
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .timeline-v2::before {
+      content: '';
+      position: absolute;
+      left: 27px;
+      top: 28px;
+      bottom: 28px;
+      width: 2px;
+      background: var(--color-border-card);
+      z-index: 0;
+    }
+
+    .timeline-v2-item {
+      display: flex;
+      gap: var(--space-lg);
+      align-items: flex-start;
+      position: relative;
+      z-index: 1;
+    }
+
+    .timeline-v2-num {
+      flex-shrink: 0;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--color-bg-white);
+    }
+
+    .timeline-v2-num.blue { background: var(--domo-blue); }
+    .timeline-v2-num.orange { background: var(--accent-orange); }
+    .timeline-v2-num.amber { background: #F59E0B; }
+
+    .timeline-v2-card {
+      flex: 1;
+      padding: var(--space-lg);
+      background: var(--color-bg-white);
+      border: 1px solid var(--color-border-card);
+      border-radius: var(--radius-md);
+      transition: border-color 0.3s var(--ease-smooth);
+    }
+
+    .timeline-v2-card:hover {
+      border-color: var(--domo-blue);
+    }
+
+    .timeline-v2-card h4 {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--color-text-heading);
+      margin-bottom: var(--space-xs);
+    }
+
+    .timeline-v2-card p {
+      font-size: 14px;
+      color: var(--color-text-muted);
+      line-height: 1.5;
+    }
+
+    .timeline-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+      margin-top: var(--space-md);
+      padding-top: var(--space-md);
+      border-top: 1px solid var(--color-border-light);
+    }
+
+    .timeline-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 2px 10px;
+      background: rgba(153, 204, 238, 0.12);
+      border-radius: var(--radius-pill);
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--color-text-link);
+      white-space: nowrap;
+    }
+
+    /* ===== DATA FLOW DIAGRAM (dark) ===== */
+    .data-flow {
+      background: var(--color-bg-hero);
+      border-radius: var(--radius-lg);
+      padding: var(--space-xl);
+    }
+
+    .data-flow-tiers {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-lg);
+      align-items: center;
+    }
+
+    .data-flow-tier {
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+      width: 100%;
+      max-width: 700px;
+    }
+
+    .data-flow-tier-label {
+      flex-shrink: 0;
+      width: 80px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      text-align: right;
+      padding-right: var(--space-md);
+      border-right: 2px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .data-flow-tier-label.write { color: var(--accent-orange); }
+    .data-flow-tier-label.sync { color: var(--domo-blue); }
+    .data-flow-tier-label.read { color: #14B8A6; }
+
+    .data-flow-nodes {
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+      flex: 1;
+    }
+
+    .data-flow-node {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      padding: var(--space-sm) var(--space-md);
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: var(--radius-md);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-text-on-dark);
+      white-space: nowrap;
+    }
+
+    .data-flow-node small {
+      display: block;
+      font-size: 11px;
+      font-weight: 400;
+      color: var(--color-text-on-dark-secondary);
+      margin-top: 1px;
+    }
+
+    .data-flow-node-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .data-flow-node-icon svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .data-flow-node-icon.orange { background: rgba(255, 153, 34, 0.2); color: var(--accent-orange); }
+    .data-flow-node-icon.blue { background: rgba(153, 204, 238, 0.2); color: var(--domo-blue); }
+    .data-flow-node-icon.teal { background: rgba(20, 184, 166, 0.2); color: #14B8A6; }
+
+    .data-flow-arrow svg {
+      width: 24px;
+      height: 12px;
+      flex-shrink: 0;
+    }
+
+    .data-flow-v-arrow {
+      display: flex;
+      justify-content: center;
+      padding-left: 96px;
+    }
+
+    .data-flow-v-arrow svg {
+      width: 12px;
+      height: 24px;
+    }
+
+    .data-flow-branch {
+      display: flex;
+      gap: var(--space-md);
+      flex: 1;
+    }
+
+    .data-flow-metrics {
+      display: flex;
+      justify-content: center;
+      gap: var(--space-2xl);
+      margin-top: var(--space-xl);
+      padding-top: var(--space-lg);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .data-flow-metric {
+      text-align: center;
+    }
+
+    .data-flow-metric-value {
+      font-size: 1.5rem;
+      font-weight: 300;
+      color: var(--domo-blue);
+      line-height: 1;
+      margin-bottom: 2px;
+    }
+
+    .data-flow-metric-label {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--color-text-on-dark-secondary);
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+    }
+
+    /* ===== MODULE GRID ===== */
+    .module-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-sm);
+    }
+
+    .module-card {
+      padding: var(--space-md);
+      background: var(--color-bg-white);
+      border: 1px solid var(--color-border-card);
+      border-radius: var(--radius-md);
+      transition: border-color 0.3s var(--ease-smooth);
+    }
+
+    .module-card:hover {
+      border-color: var(--domo-blue);
+    }
+
+    .module-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: var(--space-xs);
+    }
+
+    .module-card-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-text-heading);
+      font-family: 'SF Mono', SFMono-Regular, Menlo, monospace;
+    }
+
+    .module-card-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 1px 8px;
+      border-radius: var(--radius-pill);
+      font-size: 11px;
+      font-weight: 700;
+      background: rgba(153, 204, 238, 0.15);
+      color: var(--color-text-link);
+      white-space: nowrap;
+    }
+
+    .module-card-desc {
+      font-size: 12px;
+      color: var(--color-text-muted);
+      line-height: 1.4;
+    }
+
+    .dep-flow {
+      background: var(--color-bg-hero);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+      margin-top: var(--space-xl);
+    }
+
+    .dep-flow-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-text-on-dark);
+      margin-bottom: var(--space-md);
+      text-align: center;
+    }
+
+    .dep-flow-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-sm);
+      flex-wrap: wrap;
+      margin-bottom: var(--space-sm);
+    }
+
+    .dep-flow-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .dep-flow-node {
+      padding: var(--space-xs) var(--space-md);
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: var(--radius-md);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-text-on-dark);
+      font-family: 'SF Mono', SFMono-Regular, Menlo, monospace;
+    }
+
+    .dep-flow-node.orchestrator {
+      border-color: var(--accent-orange);
+      color: var(--accent-orange);
+    }
+
+    .dep-flow-arrow {
+      color: rgba(255, 255, 255, 0.3);
+      font-size: 1rem;
+    }
+
+    /* ===== CATEGORIZED TECH STACK ===== */
+    .tech-categories {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-xl);
+    }
+
+    .tech-category-header {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-md);
+    }
+
+    .tech-category-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--color-text-heading);
+      letter-spacing: 0.4px;
+    }
+
+    .tech-category-count {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 22px;
+      height: 22px;
+      padding: 0 6px;
+      border-radius: var(--radius-pill);
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .tech-category-count.blue { background: rgba(153, 204, 238, 0.2); color: var(--color-text-link); }
+    .tech-category-count.orange { background: rgba(255, 153, 34, 0.2); color: #E8891F; }
+    .tech-category-count.teal { background: rgba(20, 184, 166, 0.2); color: #14B8A6; }
+    .tech-category-count.amber { background: rgba(245, 158, 11, 0.2); color: #D97706; }
+
+    .tech-category-items {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-sm);
+    }
+
     /* ===== CTA BANNER ===== */
     .cta-banner {
       padding: var(--space-2xl) var(--page-padding);
@@ -1247,6 +1711,61 @@
         transform: rotate(90deg);
       }
 
+      .pipeline-dark .pipeline {
+        flex-wrap: wrap;
+      }
+
+      .pipeline-connector {
+        padding-top: 0;
+        transform: rotate(90deg);
+      }
+
+      .pipeline-callout {
+        position: static;
+        justify-content: center;
+        margin-top: var(--space-lg);
+      }
+
+      .data-flow-tier {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .data-flow-tier-label {
+        width: auto;
+        text-align: left;
+        border-right: none;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+        padding-right: 0;
+        padding-bottom: var(--space-xs);
+        margin-bottom: var(--space-xs);
+      }
+
+      .data-flow-nodes {
+        flex-wrap: wrap;
+      }
+
+      .data-flow-v-arrow {
+        padding-left: 0;
+      }
+
+      .data-flow-branch {
+        flex-direction: column;
+      }
+
+      .module-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .tech-categories {
+        grid-template-columns: 1fr;
+      }
+
+      .dep-flow-row {
+        flex-direction: column;
+        align-items: center;
+      }
+
       .cta-banner-inner {
         flex-direction: column;
         text-align: center;
@@ -1303,6 +1822,21 @@
 
       .tech-grid {
         grid-template-columns: 1fr;
+      }
+
+      .timeline-v2::before {
+        left: 21px;
+      }
+
+      .timeline-v2-num {
+        width: 44px;
+        height: 44px;
+        font-size: 16px;
+      }
+
+      .data-flow-metrics {
+        flex-wrap: wrap;
+        gap: var(--space-lg);
       }
 
       .workflow {
@@ -1709,7 +2243,11 @@
         </div>
         <div class="card-grid domo-stagger">
           <div class="card-h">
-            <div class="card-h-icon">&#128187;</div>
+            <div class="card-h-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+              </svg>
+            </div>
             <div class="card-h-body">
               <h3>Sandboxed Iframe</h3>
               <p>The app runs entirely client-side inside Domo&rsquo;s iframe. No server, no SSR, no build step &mdash;
@@ -1717,7 +2255,11 @@
             </div>
           </div>
           <div class="card-h">
-            <div class="card-h-icon">&#128451;</div>
+            <div class="card-h-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+              </svg>
+            </div>
             <div class="card-h-body">
               <h3>AppDB Collections</h3>
               <p>A NoSQL document store built into Domo. COMINT writes reviews here with a 21-field schema defined in
@@ -1726,7 +2268,11 @@
             </div>
           </div>
           <div class="card-h">
-            <div class="card-h-icon">&#128202;</div>
+            <div class="card-h-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/>
+              </svg>
+            </div>
             <div class="card-h-body">
               <h3>Datasets &amp; SQL</h3>
               <p>Domo datasets provide SQL-queryable reads. COMINT&rsquo;s review dataset is pre-joined with Gong call metadata,
@@ -1734,7 +2280,11 @@
             </div>
           </div>
           <div class="card-h">
-            <div class="card-h-icon">&#128640;</div>
+            <div class="card-h-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"/><polyline points="16 16 12 12 8 16"/>
+              </svg>
+            </div>
             <div class="card-h-body">
               <h3>Deploy Pipeline</h3>
               <p>Development uses <code style="font-size: 13px; background: rgba(153,204,238,0.12); padding: 2px 6px; border-radius: 3px;">domo dev</code>
@@ -1756,45 +2306,88 @@
           <p>Six phases of conversational development &mdash; from blank repo to production app.</p>
         </div>
 
-        <div class="timeline domo-stagger">
-          <div class="timeline-item">
-            <div class="timeline-meta">Phase 1</div>
-            <h4>Prototype &amp; Core Features</h4>
-            <p>Started in VS Code with Claude Code as the sole developer. Built the initial single-file SPA with
-              review queue, Gong iframe integration, 9-category scoring form, and AppDB persistence.
-              Shipped a working v1 that could score and save reviews.</p>
+        <div class="timeline-v2 domo-stagger">
+          <div class="timeline-v2-item">
+            <div class="timeline-v2-num blue">1</div>
+            <div class="timeline-v2-card">
+              <h4>Prototype &amp; Core Features</h4>
+              <p>Started in VS Code with Claude Code as the sole developer. Built the initial single-file SPA with
+                review queue, Gong iframe integration, 9-category scoring form, and AppDB persistence.</p>
+              <div class="timeline-pills">
+                <span class="timeline-pill">SPA Architecture</span>
+                <span class="timeline-pill">Gong iframe</span>
+                <span class="timeline-pill">AppDB CRUD</span>
+                <span class="timeline-pill">Scoring Form</span>
+              </div>
+            </div>
           </div>
-          <div class="timeline-item">
-            <div class="timeline-meta">Phase 2</div>
-            <h4>Dashboard &amp; Analytics</h4>
-            <p>Added the User Dashboard with STC KPI cards, Scores Over Time chart (Chart.js), Top Performers section,
-              and role-based access control. Introduced team benchmark overlays from a separate dataset.</p>
+          <div class="timeline-v2-item">
+            <div class="timeline-v2-num orange">2</div>
+            <div class="timeline-v2-card">
+              <h4>Dashboard &amp; Analytics</h4>
+              <p>Added the User Dashboard with STC KPI cards, Scores Over Time chart (Chart.js), Top Performers section,
+                and role-based access control. Introduced team benchmark overlays from a separate dataset.</p>
+              <div class="timeline-pills">
+                <span class="timeline-pill">Chart.js</span>
+                <span class="timeline-pill">KPI Cards</span>
+                <span class="timeline-pill">RBAC</span>
+                <span class="timeline-pill">Team Benchmarks</span>
+              </div>
+            </div>
           </div>
-          <div class="timeline-item">
-            <div class="timeline-meta">Phase 3</div>
-            <h4>AI Review Pipeline</h4>
-            <p>Created a Domo Jupyter notebook that uses an LLM to score every Gong call against the STC rubric
-              automatically. Runs daily, writes AI reviews to the same AppDB collection as human reviews.</p>
+          <div class="timeline-v2-item">
+            <div class="timeline-v2-num amber">3</div>
+            <div class="timeline-v2-card">
+              <h4>AI Review Pipeline</h4>
+              <p>Created a Domo Jupyter notebook that uses an LLM to score every Gong call against the STC rubric
+                automatically. Runs daily, writes AI reviews to the same AppDB collection as human reviews.</p>
+              <div class="timeline-pills">
+                <span class="timeline-pill">Domo Jupyter</span>
+                <span class="timeline-pill">LLM Scoring</span>
+                <span class="timeline-pill">Prompt Engineering</span>
+                <span class="timeline-pill">Automation</span>
+              </div>
+            </div>
           </div>
-          <div class="timeline-item">
-            <div class="timeline-meta">Phase 4</div>
-            <h4>Reviewed Calls &amp; Polish</h4>
-            <p>Built the Reviewed Calls tab with sortable columns, review carousel navigation, inline filters,
-              and context-aware form behavior. Added the &ldquo;My Reviews&rdquo; vs &ldquo;All Reviews&rdquo; subtab toggle.</p>
+          <div class="timeline-v2-item">
+            <div class="timeline-v2-num blue">4</div>
+            <div class="timeline-v2-card">
+              <h4>Reviewed Calls &amp; Polish</h4>
+              <p>Built the Reviewed Calls tab with sortable columns, review carousel navigation, inline filters,
+                and context-aware form behavior.</p>
+              <div class="timeline-pills">
+                <span class="timeline-pill">Sortable Tables</span>
+                <span class="timeline-pill">Filter Cache</span>
+                <span class="timeline-pill">Context Awareness</span>
+                <span class="timeline-pill">Subtab Toggle</span>
+              </div>
+            </div>
           </div>
-          <div class="timeline-item">
-            <div class="timeline-meta">Phase 5</div>
-            <h4>Architecture Refactor</h4>
-            <p>The monolithic 3,445-line <code style="font-size: 13px; background: rgba(153,204,238,0.12); padding: 2px 6px; border-radius: 3px;">app.js</code>
-              was split into 8 focused ES modules with dependency injection. Claude Code planned the dependency graph,
-              identified circular import risks, and executed the split with zero regressions.</p>
+          <div class="timeline-v2-item">
+            <div class="timeline-v2-num orange">5</div>
+            <div class="timeline-v2-card">
+              <h4>Architecture Refactor</h4>
+              <p>The monolithic 3,445-line <code style="font-size: 13px; background: rgba(153,204,238,0.12); padding: 2px 6px; border-radius: 3px;">app.js</code>
+                was split into 8 focused ES modules with dependency injection. Zero regressions during the split.</p>
+              <div class="timeline-pills">
+                <span class="timeline-pill">ES Modules</span>
+                <span class="timeline-pill">Dependency Injection</span>
+                <span class="timeline-pill">Zero Regressions</span>
+              </div>
+            </div>
           </div>
-          <div class="timeline-item">
-            <div class="timeline-meta">Phase 6</div>
-            <h4>Documentation &amp; Landing Page</h4>
-            <p>Created comprehensive CLAUDE.md project context, README, and this landing page &mdash;
-              all through the same conversational workflow. The landing page follows Domo&rsquo;s
-              Events Template design language from Figma.</p>
+          <div class="timeline-v2-item">
+            <div class="timeline-v2-num amber">6</div>
+            <div class="timeline-v2-card">
+              <h4>Documentation &amp; Landing Page</h4>
+              <p>Created comprehensive CLAUDE.md project context, README, and this landing page &mdash;
+                all through the same conversational workflow.</p>
+              <div class="timeline-pills">
+                <span class="timeline-pill">CLAUDE.md</span>
+                <span class="timeline-pill">Events Template</span>
+                <span class="timeline-pill">Domo Design Language</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1808,61 +2401,108 @@
           <h2>Zero Dependencies, Maximum Simplicity</h2>
           <p>No build step, no bundler, no node_modules. Just vanilla JavaScript served through Domo&rsquo;s CDN.</p>
         </div>
-        <div class="tech-grid domo-stagger">
-          <div class="tech-pill">
-            <div class="tech-pill-icon">&#9889;</div>
-            <div class="tech-pill-text">
-              <h4>Vanilla JavaScript</h4>
-              <p>ES Modules, no framework</p>
+        <div class="tech-categories domo-stagger">
+          <!-- Frontend -->
+          <div class="tech-category">
+            <div class="tech-category-header">
+              <span class="tech-category-title">Frontend</span>
+              <span class="tech-category-count blue">3</span>
+            </div>
+            <div class="tech-category-items">
+              <div class="tech-pill">
+                <div class="tech-pill-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+                  </svg>
+                </div>
+                <div class="tech-pill-text"><h4>Vanilla JavaScript</h4><p>ES Modules, no framework</p></div>
+              </div>
+              <div class="tech-pill">
+                <div class="tech-pill-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/>
+                  </svg>
+                </div>
+                <div class="tech-pill-text"><h4>TailwindCSS v4</h4><p>Utility classes via CDN</p></div>
+              </div>
+              <div class="tech-pill">
+                <div class="tech-pill-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/>
+                  </svg>
+                </div>
+                <div class="tech-pill-text"><h4>Chart.js</h4><p>Scores Over Time visualization</p></div>
+              </div>
             </div>
           </div>
-          <div class="tech-pill">
-            <div class="tech-pill-icon">&#127912;</div>
-            <div class="tech-pill-text">
-              <h4>TailwindCSS v4</h4>
-              <p>Utility classes via CDN</p>
+
+          <!-- Data Layer -->
+          <div class="tech-category">
+            <div class="tech-category-header">
+              <span class="tech-category-title">Data Layer</span>
+              <span class="tech-category-count teal">2</span>
+            </div>
+            <div class="tech-category-items">
+              <div class="tech-pill">
+                <div class="tech-pill-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+                  </svg>
+                </div>
+                <div class="tech-pill-text"><h4>Domo AppDB</h4><p>NoSQL write storage + sync</p></div>
+              </div>
+              <div class="tech-pill">
+                <div class="tech-pill-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/>
+                  </svg>
+                </div>
+                <div class="tech-pill-text"><h4>Domo Datasets</h4><p>SQL reads, pre-joined data</p></div>
+              </div>
             </div>
           </div>
-          <div class="tech-pill">
-            <div class="tech-pill-icon">&#128200;</div>
-            <div class="tech-pill-text">
-              <h4>Chart.js</h4>
-              <p>Scores Over Time visualization</p>
+
+          <!-- AI Pipeline -->
+          <div class="tech-category">
+            <div class="tech-category-header">
+              <span class="tech-category-title">AI Pipeline</span>
+              <span class="tech-category-count amber">1</span>
+            </div>
+            <div class="tech-category-items">
+              <div class="tech-pill">
+                <div class="tech-pill-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/>
+                  </svg>
+                </div>
+                <div class="tech-pill-text"><h4>Domo Jupyter</h4><p>LLM-powered AI review pipeline</p></div>
+              </div>
             </div>
           </div>
-          <div class="tech-pill">
-            <div class="tech-pill-icon">&#128451;</div>
-            <div class="tech-pill-text">
-              <h4>Domo AppDB</h4>
-              <p>NoSQL write storage + sync</p>
+
+          <!-- Platform -->
+          <div class="tech-category">
+            <div class="tech-category-header">
+              <span class="tech-category-title">Platform</span>
+              <span class="tech-category-count orange">2</span>
             </div>
-          </div>
-          <div class="tech-pill">
-            <div class="tech-pill-icon">&#128202;</div>
-            <div class="tech-pill-text">
-              <h4>Domo Datasets</h4>
-              <p>SQL reads, pre-joined data</p>
-            </div>
-          </div>
-          <div class="tech-pill">
-            <div class="tech-pill-icon">&#127897;</div>
-            <div class="tech-pill-text">
-              <h4>Gong Embedded</h4>
-              <p>iframe call player + Okta SSO</p>
-            </div>
-          </div>
-          <div class="tech-pill">
-            <div class="tech-pill-icon">&#129302;</div>
-            <div class="tech-pill-text">
-              <h4>Domo Jupyter</h4>
-              <p>LLM-powered AI review pipeline</p>
-            </div>
-          </div>
-          <div class="tech-pill">
-            <div class="tech-pill-icon">&#128640;</div>
-            <div class="tech-pill-text">
-              <h4>Domo Pro-Code</h4>
-              <p>Platform hosting + deployment</p>
+            <div class="tech-category-items">
+              <div class="tech-pill">
+                <div class="tech-pill-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/>
+                  </svg>
+                </div>
+                <div class="tech-pill-text"><h4>Gong Embedded</h4><p>iframe call player + Okta SSO</p></div>
+              </div>
+              <div class="tech-pill">
+                <div class="tech-pill-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"/><polyline points="16 16 12 12 8 16"/>
+                  </svg>
+                </div>
+                <div class="tech-pill-text"><h4>Domo Pro-Code</h4><p>Platform hosting + deployment</p></div>
+              </div>
             </div>
           </div>
         </div>
@@ -1906,32 +2546,86 @@
             <h3 style="font-size: 20px; font-weight: 600; color: var(--color-text-heading); margin-bottom: var(--space-sm);">
               After: 8 Focused Modules</h3>
             <p style="font-size: 14px; color: var(--color-text-muted); line-height: 1.5; margin-bottom: var(--space-md);">
-              Each module owns one concern. Dependency injection avoids circular imports.
+              Each module owns one concern.
               <code style="font-size: 13px; background: rgba(153,204,238,0.12); padding: 2px 6px; border-radius: 3px;">app.js</code> is now a lean 842-line orchestrator.</p>
-            <div class="code-block" style="margin: 0;">
-              <div class="code-block-header">
-                <span class="code-block-dot"></span>
-                <span class="code-block-dot"></span>
-                <span class="code-block-dot"></span>
-                <span class="code-block-title">modules/</span>
+            <div class="module-grid">
+              <div class="module-card">
+                <div class="module-card-header">
+                  <span class="module-card-name">state.js</span>
+                  <span class="module-card-badge">70 lines</span>
+                </div>
+                <div class="module-card-desc">Centralized application state</div>
               </div>
-              <pre><span class="code-keyword">state.js</span>      <span class="code-comment">  70 lines  &middot; centralized state</span>
-<span class="code-keyword">config.js</span>     <span class="code-comment">  99 lines  &middot; constants + IDs</span>
-<span class="code-keyword">utils.js</span>      <span class="code-comment"> 246 lines  &middot; shared helpers</span>
-<span class="code-keyword">api.js</span>        <span class="code-comment"> 189 lines  &middot; Domo API calls</span>
-<span class="code-keyword">queue.js</span>      <span class="code-comment"> 410 lines  &middot; call list + filters</span>
-<span class="code-keyword">reviewed.js</span>   <span class="code-comment"> 640 lines  &middot; reviewed calls</span>
-<span class="code-keyword">workspace.js</span>  <span class="code-comment"> 918 lines  &middot; Gong player + form</span>
-<span class="code-keyword">dashboard.js</span>  <span class="code-comment"> 616 lines  &middot; scores + charts</span></pre>
+              <div class="module-card">
+                <div class="module-card-header">
+                  <span class="module-card-name">config.js</span>
+                  <span class="module-card-badge">99 lines</span>
+                </div>
+                <div class="module-card-desc">Constants, dataset IDs, STC names</div>
+              </div>
+              <div class="module-card">
+                <div class="module-card-header">
+                  <span class="module-card-name">utils.js</span>
+                  <span class="module-card-badge">246 lines</span>
+                </div>
+                <div class="module-card-desc">Formatting, toasts, colors, dates</div>
+              </div>
+              <div class="module-card">
+                <div class="module-card-header">
+                  <span class="module-card-name">api.js</span>
+                  <span class="module-card-badge">189 lines</span>
+                </div>
+                <div class="module-card-desc">Domo API data loading functions</div>
+              </div>
+              <div class="module-card">
+                <div class="module-card-header">
+                  <span class="module-card-name">queue.js</span>
+                  <span class="module-card-badge">410 lines</span>
+                </div>
+                <div class="module-card-desc">Call list, filters, cache</div>
+              </div>
+              <div class="module-card">
+                <div class="module-card-header">
+                  <span class="module-card-name">reviewed.js</span>
+                  <span class="module-card-badge">640 lines</span>
+                </div>
+                <div class="module-card-desc">Reviewed calls table, sort, subtabs</div>
+              </div>
+              <div class="module-card">
+                <div class="module-card-header">
+                  <span class="module-card-name">workspace.js</span>
+                  <span class="module-card-badge">918 lines</span>
+                </div>
+                <div class="module-card-desc">Gong player, review form, submission</div>
+              </div>
+              <div class="module-card">
+                <div class="module-card-header">
+                  <span class="module-card-name">dashboard.js</span>
+                  <span class="module-card-badge">616 lines</span>
+                </div>
+                <div class="module-card-desc">Scores, charts, Top Performers</div>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="callout" style="margin-top: var(--space-xl);">
-          <h4>No Circular Dependencies</h4>
-          <p>Modules that need functions from the orchestrator (like <code style="font-size: 13px; background: rgba(153,204,238,0.12); padding: 2px 6px; border-radius: 3px;">showView()</code>)
-            receive them through dependency injection at startup. Each module exports an <code style="font-size: 13px; background: rgba(153,204,238,0.12); padding: 2px 6px; border-radius: 3px;">init*()</code>
-            function that stores injected references in a module-level variable &mdash; keeping the import graph clean and acyclic.</p>
+        <div class="dep-flow">
+          <div class="dep-flow-title">Dependency Injection &mdash; No Circular Imports</div>
+          <div class="dep-flow-row">
+            <div class="dep-flow-node orchestrator">app.js</div>
+            <span class="dep-flow-arrow">&rarr;</span>
+            <div class="dep-flow-node">initWorkspace(showView, renderQueue, invalidateCache)</div>
+          </div>
+          <div class="dep-flow-row">
+            <div class="dep-flow-node orchestrator">app.js</div>
+            <span class="dep-flow-arrow">&rarr;</span>
+            <div class="dep-flow-node">initQueue(openCallReview)</div>
+          </div>
+          <div class="dep-flow-row">
+            <div class="dep-flow-node orchestrator">app.js</div>
+            <span class="dep-flow-arrow">&rarr;</span>
+            <div class="dep-flow-node">initReviewed(openCallReview)</div>
+          </div>
         </div>
       </div>
     </section>
@@ -1945,34 +2639,95 @@
           <p>Writes go to AppDB for speed; reads come from a pre-joined dataset for efficiency. The two stay in sync automatically.</p>
         </div>
 
-        <div class="card-grid domo-stagger">
-          <div class="card-h" style="flex-direction: column;">
-            <h3 style="font-size: 20px; font-weight: 600; color: var(--color-text-heading); margin-bottom: var(--space-sm);">
-              Write Path</h3>
-            <p style="font-size: 14px; color: var(--color-text-muted); line-height: 1.5; margin-bottom: var(--space-md);">
-              When a user submits a review, scores write directly to the AppDB collection. The collection has
-              <code style="font-size: 13px; background: rgba(153,204,238,0.12); padding: 2px 6px; border-radius: 3px;">syncEnabled: true</code>,
-              which triggers automatic sync to the downstream dataset.</p>
-            <div class="workflow" style="margin: 0; padding: 0; justify-content: flex-start;">
-              <div class="workflow-step" style="font-size: 12px; padding: var(--space-sm) var(--space-md);">Review Form</div>
-              <span class="workflow-arrow">&#8594;</span>
-              <div class="workflow-step" style="font-size: 12px; padding: var(--space-sm) var(--space-md);">AppDB</div>
-              <span class="workflow-arrow">&#8594;</span>
-              <div class="workflow-step" style="font-size: 12px; padding: var(--space-sm) var(--space-md);">Auto-Sync</div>
-              <span class="workflow-arrow">&#8594;</span>
-              <div class="workflow-step" style="font-size: 12px; padding: var(--space-sm) var(--space-md);">Dataset</div>
+        <div class="data-flow">
+          <div class="data-flow-tiers domo-stagger">
+            <!-- Write Path -->
+            <div class="data-flow-tier">
+              <div class="data-flow-tier-label write">Write</div>
+              <div class="data-flow-nodes">
+                <div class="data-flow-node">
+                  <div class="data-flow-node-icon orange">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                    </svg>
+                  </div>
+                  <div>Review Form<small>9 STC scores + comments</small></div>
+                </div>
+                <div class="data-flow-arrow">
+                  <svg viewBox="0 0 24 12" fill="none"><path d="M0 6h20M16 2l4 4-4 4" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </div>
+                <div class="data-flow-node">
+                  <div class="data-flow-node-icon orange">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+                    </svg>
+                  </div>
+                  <div>AppDB Collection<small>21 fields, snake_case</small></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Vertical Arrow -->
+            <div class="data-flow-v-arrow">
+              <svg viewBox="0 0 12 24" fill="none"><path d="M6 0v20M2 16l4 4 4-4" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+
+            <!-- Sync -->
+            <div class="data-flow-tier">
+              <div class="data-flow-tier-label sync">Sync</div>
+              <div class="data-flow-nodes">
+                <div class="data-flow-node">
+                  <div class="data-flow-node-icon blue">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+                    </svg>
+                  </div>
+                  <div>Auto-Sync<small>syncEnabled: true</small></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Vertical Arrow -->
+            <div class="data-flow-v-arrow">
+              <svg viewBox="0 0 12 24" fill="none"><path d="M6 0v20M2 16l4 4 4-4" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+
+            <!-- Read Paths -->
+            <div class="data-flow-tier">
+              <div class="data-flow-tier-label read">Read</div>
+              <div class="data-flow-branch">
+                <div class="data-flow-node">
+                  <div class="data-flow-node-icon teal">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+                    </svg>
+                  </div>
+                  <div>AppDB Direct<small>Queue: myReviews (user-scoped)</small></div>
+                </div>
+                <div class="data-flow-node">
+                  <div class="data-flow-node-icon teal">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
+                    </svg>
+                  </div>
+                  <div>Pre-Joined Dataset<small>Dashboard: callReviews (all, camelCase)</small></div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="card-h" style="flex-direction: column;">
-            <h3 style="font-size: 20px; font-weight: 600; color: var(--color-text-heading); margin-bottom: var(--space-sm);">
-              Read Paths</h3>
-            <p style="font-size: 14px; color: var(--color-text-muted); line-height: 1.5; margin-bottom: var(--space-md);">
-              The queue reads directly from AppDB (user-specific, real-time). The dashboard reads from a pre-joined dataset
-              (all reviews + call metadata) for efficient filtering across thousands of records.</p>
-            <div style="font-size: 13px; color: var(--color-text-muted); font-family: 'SF Mono', SFMono-Regular, Menlo, monospace; line-height: 1.8;">
-              <strong style="color: var(--color-text-heading); font-family: var(--font-primary);">Queue:</strong> AppDB &rarr; myReviews (user-scoped)<br>
-              <strong style="color: var(--color-text-heading); font-family: var(--font-primary);">Dashboard:</strong> Dataset &rarr; callReviews (all, pre-joined)<br>
-              <strong style="color: var(--color-text-heading); font-family: var(--font-primary);">Format:</strong> snake_case &rarr; camelCase on load
+
+          <div class="data-flow-metrics">
+            <div class="data-flow-metric">
+              <div class="data-flow-metric-value" data-value="21">21</div>
+              <div class="data-flow-metric-label">Schema Fields</div>
+            </div>
+            <div class="data-flow-metric">
+              <div class="data-flow-metric-value" data-value="3">3</div>
+              <div class="data-flow-metric-label">Datasets</div>
+            </div>
+            <div class="data-flow-metric">
+              <div class="data-flow-metric-value" data-value="1">1</div>
+              <div class="data-flow-metric-label">Collection</div>
             </div>
           </div>
         </div>
@@ -1988,35 +2743,71 @@
           <p>Every call gets scored automatically by an LLM running on a daily schedule inside Domo&rsquo;s Jupyter environment.</p>
         </div>
 
-        <div class="pipeline domo-stagger">
-          <div class="pipeline-stage">
-            <div class="pipeline-stage-icon">&#127897;</div>
-            <h4>Gong Records</h4>
-            <p>Call audio &amp; transcript captured automatically</p>
+        <div class="pipeline-dark">
+          <div class="pipeline domo-stagger">
+            <div class="pipeline-stage">
+              <div class="pipeline-icon-box blue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/>
+                </svg>
+              </div>
+              <h4>Gong Records</h4>
+              <p>Call audio &amp; transcript captured automatically</p>
+            </div>
+            <div class="pipeline-connector">
+              <svg viewBox="0 0 32 12" fill="none"><path d="M0 6h28M24 2l4 4-4 4" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="pipeline-stage">
+              <div class="pipeline-icon-box orange">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+                </svg>
+              </div>
+              <h4>Domo Connector</h4>
+              <p>Syncs call metadata &amp; transcripts to dataset</p>
+            </div>
+            <div class="pipeline-connector">
+              <svg viewBox="0 0 32 12" fill="none"><path d="M0 6h28M24 2l4 4-4 4" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="pipeline-stage">
+              <div class="pipeline-icon-box teal">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/>
+                </svg>
+              </div>
+              <h4>Jupyter + LLM</h4>
+              <p>Scores each category 0&ndash;5 with reasoning</p>
+            </div>
+            <div class="pipeline-connector">
+              <svg viewBox="0 0 32 12" fill="none"><path d="M0 6h28M24 2l4 4-4 4" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="pipeline-stage">
+              <div class="pipeline-icon-box amber">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+                </svg>
+              </div>
+              <h4>AppDB Write</h4>
+              <p>Saves review with scores &amp; comments</p>
+            </div>
+            <div class="pipeline-connector">
+              <svg viewBox="0 0 32 12" fill="none"><path d="M0 6h28M24 2l4 4-4 4" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="pipeline-stage">
+              <div class="pipeline-icon-box slate">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/>
+                </svg>
+              </div>
+              <h4>Dashboard</h4>
+              <p>AI reviews appear alongside human reviews</p>
+            </div>
           </div>
-          <span class="pipeline-arrow">&#8594;</span>
-          <div class="pipeline-stage">
-            <div class="pipeline-stage-icon">&#128196;</div>
-            <h4>Domo Connector</h4>
-            <p>Syncs call metadata &amp; transcripts to dataset</p>
-          </div>
-          <span class="pipeline-arrow">&#8594;</span>
-          <div class="pipeline-stage">
-            <div class="pipeline-stage-icon">&#129302;</div>
-            <h4>Jupyter + LLM</h4>
-            <p>Scores each category 0&ndash;5 with reasoning</p>
-          </div>
-          <span class="pipeline-arrow">&#8594;</span>
-          <div class="pipeline-stage">
-            <div class="pipeline-stage-icon">&#128451;</div>
-            <h4>AppDB Write</h4>
-            <p>Saves review with scores &amp; comments</p>
-          </div>
-          <span class="pipeline-arrow">&#8594;</span>
-          <div class="pipeline-stage">
-            <div class="pipeline-stage-icon">&#128200;</div>
-            <h4>Dashboard</h4>
-            <p>AI reviews appear alongside human reviews</p>
+          <div class="pipeline-callout">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+            </svg>
+            Daily Schedule &middot; Fully Automated
           </div>
         </div>
 
